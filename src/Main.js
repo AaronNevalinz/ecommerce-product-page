@@ -8,13 +8,13 @@ import minusIcon from './images/icon-minus.svg';
 import plusIcon from './images/icon-plus.svg';
 import arrowNext from './images/icon-next.svg';
 import arrowPrevious from './images/icon-previous.svg';
+import {useState} from 'react';
 
 const Main = () => {
 
     let price = 250;
     let discount = 50;
     let discountedPrice = discount/100 * price;
-    let count = 0;
     let slideIndex = 0
     const imageSlide = document.querySelectorAll('.imageSlide');
 
@@ -26,6 +26,8 @@ const Main = () => {
         }
         document.querySelector('.imageSlide').style.transform = `translate(${-100 * slideIndex}%)`;
     }
+
+    const [count, setCount] = useState(0);
 
     return ( 
 
@@ -81,13 +83,13 @@ const Main = () => {
                 <div className='md:flex gap-3'>
                     <div className='flex justify-between bg-secondary-200 py-2 px-4 rounded-lg mt-3 items-center md:w-[150px]'>
                         <span>
-                            <img className='cursor-pointer' src={minusIcon} alt="" />
+                            <img onClick={()=>setCount(count-1)} className='cursor-pointer' src={minusIcon} alt="" />
                         </span>
 
                         <p>{count}</p>
                         
                         <span>
-                            <img className='cursor-pointer' src={plusIcon} alt="" />
+                            <img onClick={()=>setCount(count+1)} className='cursor-pointer' src={plusIcon} alt="" />
                         </span>
                     </div>
                     <button className='flex bg-primary-100 w-full text-slate-50 font-medium justify-center py-2 mt-3 rounded-lg cursor-pointer'>
