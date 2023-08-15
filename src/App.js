@@ -1,6 +1,7 @@
 import Navbar from './Navbar';
 import Main from './Main';
 import './index.css';
+import Cart from './Cart';
 
 function App() {
   return (
@@ -9,8 +10,12 @@ function App() {
       {/* overlay container */}
       <div className='over-lay hidden'></div>
 
-      <Navbar />
-
+      <div className="">
+        <Navbar />
+      </div>
+      <div className='inline-block shadow-lg rounded-2xl invisible'>
+        <Cart/>
+      </div>
       <div className="content">
         <Main />
       </div>

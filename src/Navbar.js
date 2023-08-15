@@ -5,6 +5,12 @@ import logo from './images/logo.svg'
 import './style.css'
 import menu from './images/icon-menu.svg'
 import close from './images/icon-close.svg';
+import Cart from './Cart';
+
+const handeClick = ()=>{
+    // document.querySelector({Cart}).remove('hidden');
+    console.log({Cart});
+}
 
 const Navbar = () => {
    
@@ -21,7 +27,8 @@ const Navbar = () => {
 
 
     return (
-        <nav className="flex items-center justify-between px-5 md:w-[80%] md:mx-auto md:py-8 py-2 relative">
+        <nav className="flex items-center justify-between px-5 md:w-[80%] md:mx-auto md:py-8 py-2 relative border-b">
+            
             <div className="flex items-center md:items-start md:gap-10">
                 <img onClick={handleHamburgerClick} className='mr-4 md:hidden cursor-pointer' src={menu} alt="hamburger-menu" id='hamburger-menu'/>
                 <img src={logo} alt="Logo" />
@@ -34,9 +41,10 @@ const Navbar = () => {
                     <li className=''><a href="/">Contact</a></li>
                 </ul>
             </div>
+
             <div className="flex gap-4 items-center md:gap-10">
-                <img className='cursor-pointer' src={shoppingCart} alt="Shopping Cart" />
-                <img className='w-10 cursor-pointer' src={profileImg} alt="ProfileImg" />
+                    <img className='cursor-pointer' src={shoppingCart} alt="Shopping Cart" />
+                    <img onClick={handeClick} className='w-10 cursor-pointer' src={profileImg} alt="ProfileImg" />
             </div>
         </nav>
      );
