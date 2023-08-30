@@ -1,0 +1,122 @@
+.ecommerce__navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ecommerce__navbar-links{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ecommerce__navbar-links-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 3rem;
+}
+.ecommerce__navbar-links-logo img{
+    width: 100px;
+    cursor: pointer;
+}
+.ecommerce__navbar-links-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 3rem;
+}
+.ecommerce__navbar-links-container p a{
+    color: var(--dark-grayish-blue);
+    transition: ease-in-out 5ms;
+}
+.ecommerce__navbar-links-container p a:hover{
+    color: var(--very-dark-blue);
+}
+.ecommerce__navbar-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+}
+.ecommerce__navbar-user-img{
+    width: 50px;
+    cursor: pointer;
+}
+.ecommerce__navbar-user-img:hover{
+    border: 2px solid var(--orange);
+    border-radius: 50%;
+}
+.ecommerce__navbar-toggle-icons{
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+.ecommerce__navbar-toggle-icons img{
+    width: 25px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.ecommerce__navbar__mobile-links{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+
+
+    flex-direction: column;
+
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 2rem 1rem;
+    background: var(--white);
+    width: 50%;
+    box-shadow: 0px 0px 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+.ecommerce__navbar__mobile-links img{
+    margin-bottom: 2rem;
+}
+.ecommerce__navbar__mobile-links p a{
+    font-weight: var(--font-700);
+    color: var(--dark-grayish-blue);
+    transition: ease-in-out 5ms;
+}
+.ecommerce__navbar__mobile-links p a:hover{
+    color: var(--very-dark-blue);
+}
+
+.ecommerce__navbar-cart-toggle{
+    position: absolute;
+    right: 8rem;
+    top: 6rem;
+    z-index: 10;
+    background-color: var(--white);
+}
+
+
+@media screen and (max-width:1050px) {
+    .ecommerce__navbar-links-container{
+        display: none;
+    }
+    .ecommerce__navbar-toggle-icons{
+        display: flex;
+    }
+    .ecommerce__navbar-cart-toggle{
+        right: 0;
+        padding: 0 1rem;    
+    }
+}
+@media screen and (max-width:550px){
+    .ecommerce__navbar-cart-toggle{
+        padding: 0 1rem;    
+        width: 100%;
+    }
+}
