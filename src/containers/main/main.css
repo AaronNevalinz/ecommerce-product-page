@@ -1,9 +1,10 @@
 .ecommerce__main{
     position: relative;
-    top: 2  rem;
+    top: 2rem;
+    /* top: 94px; */
 
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 
     gap: 5rem;
@@ -11,6 +12,8 @@
 .section__padding__main{
     padding: 0 20rem;
 }
+
+
 .ecommerce__main-groupA{
     flex: 1;
 }
@@ -18,11 +21,14 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
+    width: 100%;
 }
 .ecommerce__main-img img{
     width: 100%;
     border-radius: 8px;
     height: 55vh;
+    /* object-fit: cover; */
 }
 .ecommerce__main-img-thumbs{
     display: flex;
@@ -61,6 +67,15 @@
     display: flex;
     gap: 1rem;
 } 
+.ecommerce__main-product-price h1 span{
+    font-size: 18px;
+}
+.ecommerce__main-product-price .discount{
+    font-size: 13px;
+    background: var(--grayish-blue);
+    padding: 0 5px;
+    border-radius: 8px;
+}
 .ecommerce__main-product-price p{
     text-decoration: line-through;
 }
@@ -101,4 +116,57 @@
     font-weight: var(--font-700);
     color: var(--white);
     text-align: center;
+}
+
+
+@media screen and (max-width:1300px) {
+    .section__padding__main{
+        padding: 0 15rem;
+    }
+}
+@media screen and (max-width:1050px) {
+    .section__padding__main{
+        padding: 0rem 1rem;
+    }
+    .ecommerce__main{
+        align-items: normal;
+        top: 94px;
+    }
+    .ecommerce__main-img img{
+        width: 100%;
+        height: 40vh;
+        /* border-radius: 0; */
+    }
+    .ecommerce__main-groupB h4{
+        font-size: 14px;
+    }
+    .ecommerce__main-groupB h1{
+        font-size: 34px !important;
+        line-height: 40px !important;
+    }
+}
+@media screen and (max-width:750px) {
+    .ecommerce__main{
+        flex-direction: column;
+        gap: 1rem;
+        top: 80px;
+        align-items: normal;
+    }
+    .ecommerce__main-groupA{
+        flex: 0;
+    }
+    .section__padding__main{
+        padding: 0;
+    }
+    .ecommerce__main-img img{
+        width: 100%;
+        height: 40vh;
+        border-radius: 0;
+    }
+    .ecommerce__main-img-thumbs{
+        display: none;
+    }
+    .ecommerce__main-groupB{
+        padding: 0 2rem;
+    }
 }
